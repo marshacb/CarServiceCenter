@@ -19,9 +19,6 @@ func Start() {
 		port = "8080"
 	}
 
-	// client := db.OpenConnection()
-	// fmt.Println("client", client)
-
 	log.Printf("Starting server on port %s\n", port)
 	log.Fatal(http.ListenAndServe(":"+port, r))
 }
