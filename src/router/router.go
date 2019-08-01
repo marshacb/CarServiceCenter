@@ -32,7 +32,7 @@ func Initialize() *chi.Mux {
 	muxRouter.Get("/appointment/{id}", appointmentsController.GetAppointment)
 	muxRouter.Post("/appointment/", appointmentsController.CreateAppointment)
 	muxRouter.Patch("/appointment/{id}", appointmentsController.UpdateAppointmentStatus)
-	muxRouter.Delete("/appointment/(id}", appointmentsController.DeleteAppointment)
+	muxRouter.Delete("/appointment/{id}", appointmentsController.DeleteAppointment)
 	muxRouter.Get("/appointments/range/", appointmentsController.GetAppointmentsWithinDateRange)
 
 	return muxRouter
